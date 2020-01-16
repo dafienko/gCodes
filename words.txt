@@ -1,0 +1,25 @@
+G00 : Rapid Linear Interpolation
+G01 : Linear Interpolation; requires an f-code
+G02 : CW
+G03 : CCW
+G17 : Select XY Plane
+G20 : Select Inches
+G28 : Return to Reference Point
+G40 : Cancel Cutter Compensation
+G41 : Cutter Compensation Right
+G42 : Cutter Compensation Left
+G43 : Tool length Compensation; requires an H-code witha corresponding T-code
+G80 : Canned Cycle Cancel
+G81 : Drill Cycle
+G82 : Spot Drill Cycle
+G83 : Peck Drill Cycle 
+G84 : Tap Cycle
+G90 : Absolute Positioning
+G91 : Incremental Positioning
+G49 : Cancel G43
+M03 : Spindle Forward (CW)
+M05 : Spindle Stop
+M08 : Coolant On
+M09 : Coolant Off
+M06 : Tool change; needs a T-code
+M30 : End of program + reset
