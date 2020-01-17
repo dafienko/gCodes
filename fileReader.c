@@ -1,4 +1,3 @@
-#pragma once
 #include "fileReader.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -15,7 +14,6 @@ int max(int a, int b) {
 
 
 LINES* getFileLines(FILE* file) {	
-<<<<<<< HEAD
 	LINES* result = malloc(sizeof(LINES));
 
 	int bufferSize = 10;
@@ -26,17 +24,7 @@ LINES* getFileLines(FILE* file) {
 	char c = getc(file);
 
 	do {
-=======
-	LINES* result;
-	int bufferSize = 10;
-	int lineLength = 1;
-	char* line = (char*)calloc(bufferSize, sizeof(char));
-	char* lines[MAX_LINES]; 
-	int numLines = 0;
-	char c = getc(file);
-	do {
-		printf("%c", c);
->>>>>>> 8056506af0869378291a86fab8eeb4b0a433e00a
+//		printf("%c", c);
 		if (c != EOF && c != '\n') {
 			lineLength++;
 			if (lineLength >= bufferSize - 1) {
@@ -53,11 +41,8 @@ LINES* getFileLines(FILE* file) {
 			sprintf(line, "%s%c", line, c);
 		} else if (c == '\n') {
 			sprintf(line, "%s%c", line, '\n');
-<<<<<<< HEAD
 			*(lines + numLines) = line;	
-=======
 			lines[min(numLines, MAX_LINES)] = line;	
->>>>>>> 8056506af0869378291a86fab8eeb4b0a433e00a
 			bufferSize = 10;
 			line = (char*)calloc(bufferSize, sizeof(char));
 			lineLength = 1;
@@ -69,10 +54,6 @@ LINES* getFileLines(FILE* file) {
 	
 	result->lines = lines;
 	result->numLines = numLines;
-<<<<<<< HEAD
 	
-=======
- 
->>>>>>> 8056506af0869378291a86fab8eeb4b0a433e00a
 	return result;
 }
